@@ -1,163 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NA-SHARADA GLOBAL LIMITED</title>
-
-<style>
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
-
-body {
-font-family: Arial, sans-serif;
-background: #f4f7fb;
-color: #222;
-}
-
-header {
-background: #063b70;
-color: white;
-padding: 25px 15px;
-text-align: center;
-}
-
-header h1 {
-font-size: 25px;
-}
-
-nav {
-background: #05294c;
-padding: 15px;
-text-align: center;
-}
-
-nav a {
-color: white;
-text-decoration: none;
-margin: 10px;
-font-weight: bold;
-}
-
-.hero {
-background: linear-gradient(120deg,#063b70,#087caa);
-color: white;
-text-align: center;
-padding: 80px 20px;
-}
-
-.hero h2 {
-font-size: 32px;
-margin-bottom: 15px;
-}
-
-.hero p {
-font-size: 17px;
-line-height: 1.6;
-}
-
-section {
-padding: 45px 20px;
-text-align: center;
-}
-
-h2 {
-color: #063b70;
-margin-bottom: 20px;
-}
-
-.services {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 20px;
-}
-
-.card {
-background: white;
-padding: 25px;
-width: 280px;
-border-radius: 12px;
-box-shadow: 0 3px 12px #ccc;
-}
-
-.card h3 {
-color: #087caa;
-margin-bottom: 12px;
-}
-
-footer {
-background: #05294c;
-color: white;
-text-align: center;
-padding: 25px;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NA SHARADA GLOBAL LIMITED - Sales, telecom support, digital services, phones, accessories and clothing in Kano, Nigeria.">
+  <title>NA SHARADA GLOBAL LIMITED</title>
+  <style>
+    :root {
+      --navy: #07345f;
+      --blue: #0878a8;
+      --gold: #e5b64d;
+      --ink: #1d2935;
+      --muted: #627184;
+      --paper: #f4f7fb;
+      --white: #fff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: Arial, Helvetica, sans-serif; color: var(--ink); background: var(--paper); line-height: 1.6; }
+    a { color: inherit; }
+    .topbar { background: #052744; color: #fff; text-align: center; padding: 8px 14px; font-size: 13px; }
+    header { background: var(--navy); color: white; padding: 20px 5%; display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
+    .brand h1 { font-size: clamp(20px, 3vw, 29px); letter-spacing: .4px; }
+    .brand p { color: #d7e7f3; font-size: 13px; }
+    nav { display: flex; flex-wrap: wrap; gap: 16px; }
+    nav a { text-decoration: none; color: white; font-weight: 700; font-size: 14px; }
+    nav a:hover { color: var(--gold); }
+    .hero { padding: 85px 6%; text-align: center; color: white; background: linear-gradient(125deg, rgba(5,39,68,.96), rgba(8,120,168,.88)); }
+    .hero .eyebrow { color: var(--gold); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; font-size: 12px; }
+    .hero h2 { font-size: clamp(30px, 5vw, 48px); line-height: 1.15; margin: 14px auto; max-width: 850px; }
+    .hero p { max-width: 680px; margin: 0 auto 26px; color: #edf6fc; }
+    .btn { display: inline-block; text-decoration: none; border-radius: 7px; padding: 12px 20px; margin: 5px; font-weight: 700; background: var(--gold); color: #182330; }
+    .btn.secondary { background: transparent; border: 1px solid white; color: white; }
+    section { padding: 58px 6%; }
+    .section-heading { text-align: center; margin-bottom: 30px; }
+    .section-heading h2 { color: var(--navy); font-size: clamp(25px, 4vw, 34px); }
+    .section-heading p { color: var(--muted); max-width: 680px; margin: 8px auto 0; }
+    .about { max-width: 900px; margin: auto; text-align: center; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+    .card { background: white; border-radius: 12px; padding: 24px; box-shadow: 0 5px 18px rgba(20,45,70,.08); border-bottom: 3px solid var(--gold); }
+    .card .symbol { font-size: 30px; margin-bottom: 10px; }
+    .card h3 { color: var(--blue); margin-bottom: 8px; font-size: 18px; }
+    .card p { color: var(--muted); font-size: 14px; }
+    .updates { background: #eaf1f7; }
+    .update-box { max-width: 760px; margin: auto; background: white; border-radius: 12px; padding: 25px; text-align: center; }
+    .contact-wrap { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 22px; max-width: 950px; margin: auto; }
+    .contact-card { background: white; border-radius: 12px; padding: 24px; box-shadow: 0 5px 18px rgba(20,45,70,.08); }
+    .contact-card h3 { color: var(--navy); margin-bottom: 12px; }
+    .contact-card p, .contact-card a { color: var(--muted); overflow-wrap: anywhere; }
+    .contact-card a { text-decoration: none; }
+    .contact-card a:hover { color: var(--blue); }
+    .contact-line { margin: 7px 0; }
+    footer { background: #052744; color: #dce8f1; text-align: center; padding: 25px 15px; font-size: 13px; }
+    .whatsapp-float { position: fixed; right: 18px; bottom: 18px; z-index: 10; background: #168b50; color: white; text-decoration: none; border-radius: 30px; padding: 12px 17px; font-weight: 700; box-shadow: 0 4px 15px #0003; }
+    @media (max-width: 600px) {
+      header { justify-content: center; text-align: center; }
+      nav { justify-content: center; gap: 12px; }
+      .hero { padding: 65px 6%; }
+      section { padding: 45px 5%; }
+    }
+  </style>
 </head>
-
 <body>
+  <div class="topbar">Your trusted partner for sales, digital support and everyday business needs in Kano</div>
 
-<header>
-<h1>NA-SHARADA GLOBAL LIMITED</h1>
-<p>Business | Sales | Digital Services</p>
-</header>
+  <header>
+    <div class="brand">
+      <h1>NA SHARADA GLOBAL LIMITED</h1>
+      <p>Business • Sales • Digital Services</p>
+    </div>
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#services">Services</a>
+      <a href="#updates">Latest Updates</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-<nav>
-<a href="#home">Home</a>
-<a href="#about">About Us</a>
-<a href="#services">Services</a>
-<a href="#contact">Contact</a>
-</nav>
+  <main>
+    <div class="hero" id="home">
+      <div class="eyebrow">Welcome to our company</div>
+      <h2>Reliable Services. Everyday Solutions.</h2>
+      <p>NA SHARADA GLOBAL LIMITED is committed to serving individuals, customers and business partners with dependable sales and support services.</p>
+      <a class="btn" href="#services">Explore Our Services</a>
+      <a class="btn secondary" href="https://wa.me/2347044407777" target="_blank" rel="noopener">Chat on WhatsApp</a>
+    </div>
 
-<div class="hero" id="home">
-<h2>Welcome to NA-SHARADA GLOBAL LIMITED</h2>
-<p>Your Trusted Partner for Sales, Digital Services and Agent Registration.</p>
-</div>
+    <section id="about">
+      <div class="section-heading">
+        <h2>About Our Company</h2>
+        <p>Who we are and what we do</p>
+      </div>
+      <div class="about">
+        <p>NA SHARADA GLOBAL LIMITED is a customer-focused business based in Kano, Nigeria. We provide a range of sales, telecom-related support, digital assistance and retail products. Our goal is to make useful services and quality everyday items easier for our customers to access.</p>
+      </div>
+    </section>
 
-<section id="about">
-<h2>About Our Company</h2>
-<p>
-NA-SHARADA GLOBAL LIMITED is committed to providing
-business solutions, sales services and digital services
-to customers and business partners.
-</p>
-</section>
+    <section id="services">
+      <div class="section-heading">
+        <h2>Our Products &amp; Services</h2>
+        <p>Explore some of the products and services available through our business.</p>
+      </div>
+      <div class="grid">
+        <article class="card"><div class="symbol">📱</div><h3>Phones &amp; Accessories</h3><p>Mobile phones and selected phone accessories for everyday use.</p></article>
+        <article class="card"><div class="symbol">📶</div><h3>Telecom Services</h3><p>MTN and Airtel line sales, line swaps and related customer assistance, subject to provider requirements.</p></article>
+        <article class="card"><div class="symbol">🪪</div><h3>NIN &amp; BVN Assistance</h3><p>Guidance and assistance with available NIN and BVN-related services through the appropriate official channels.</p></article>
+        <article class="card"><div class="symbol">🏦</div><h3>Account Opening Support</h3><p>Assistance with account-opening enquiries and processes offered by participating financial institutions.</p></article>
+        <article class="card"><div class="symbol">👕</div><h3>Clothing &amp; Jerseys</h3><p>Clothing, jerseys and selected fashion items for different everyday needs.</p></article>
+        <article class="card"><div class="symbol">🧸</div><h3>Children's Wear &amp; Sleepwear</h3><p>Selected children's clothing, sleepwear and comfortable home-wear items.</p></article>
+        <article class="card"><div class="symbol">🧵</div><h3>Flower, Rib &amp; Fabrics</h3><p>Selected flower-rib materials, fabrics and related clothing items.</p></article>
+        <article class="card"><div class="symbol">🤝</div><h3>Agent &amp; Business Enquiries</h3><p>Contact us to ask about current business opportunities, agent enquiries and service availability.</p></article>
+      </div>
+    </section>
 
-<section id="services">
-<h2>Our Services</h2>
+    <section class="updates" id="updates">
+      <div class="section-heading">
+        <h2>Latest Updates</h2>
+        <p>Company announcements and service updates will be published here.</p>
+      </div>
+      <div class="update-box">
+        <h3>Stay Connected</h3>
+        <p>There are no new announcements at the moment. Please contact us by phone or WhatsApp for the latest information about products and service availability.</p>
+      </div>
+    </section>
 
-<div class="services">
+    <section id="contact">
+      <div class="section-heading">
+        <h2>Contact Us</h2>
+        <p>We welcome your enquiries. Reach out using any of the details below.</p>
+      </div>
+      <div class="contact-wrap">
+        <div class="contact-card">
+          <h3>Phone Numbers</h3>
+          <p class="contact-line"><a href="tel:07033334242">07033334242</a></p>
+          <p class="contact-line"><a href="tel:07044407777">07044407777</a></p>
+          <p class="contact-line"><a href="tel:07039371007">07039371007</a></p>
+          <p class="contact-line"><a href="https://wa.me/2347044407777" target="_blank" rel="noopener">WhatsApp: 07044407777</a></p>
+        </div>
+        <div class="contact-card">
+          <h3>Business Address</h3>
+          <p>No. 4, Sharada Malam Bus Stop, Near Kasuwa Friday Mosque, Kano, Nigeria.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<div class="card">
-<h3>Sales</h3>
-<p>We provide sales services and business opportunities.</p>
-</div>
+  <footer>
+    <p><strong>NA SHARADA GLOBAL LIMITED</strong></p>
+    <p>Copyright &copy; 2026 NA SHARADA GLOBAL LIMITED. All Rights Reserved.</p>
+  </footer>
 
-<div class="card">
-<h3>Digital Services</h3>
-<p>We offer digital solutions to support businesses and customers.</p>
-</div>
-
-<div class="card">
-<h3>Agent Registration</h3>
-<p>Join our network and become a registered agent.</p>
-</div>
-
-</div>
-</section>
-
-<section id="contact">
-<h2>Contact Us</h2>
-<p>Contact NA-SHARADA GLOBAL LIMITED for business enquiries.</p>
-</section>
-
-<footer>
-<p>Copyright &copy; 2026 NA-SHARADA GLOBAL LIMITED.</p>
-<p>All Rights Reserved.</p>
-</footer>
-
+  <a class="whatsapp-float" href="https://wa.me/2347044407777" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">WhatsApp Us</a>
 </body>
 </html>
