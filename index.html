@@ -1,163 +1,602 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#071b50">
-<meta name="description" content="Shop phones, accessories, clothing, kids wear and bedding at NA-SHARADA GLOBAL LIMITED.">
-<title>NA-SHARADA GLOBAL LIMITED | Online Store</title>
+<title>NA-SHARADA GLOBAL LIMITED</title>
+
 <style>
-:root{--navy:#071b50;--blue:#17458f;--gold:#e8b32e;--red:#c92735;--green:#16834b;--bg:#f4f7fc;--ink:#17213a}
+:root {
+  --navy:#071b3a;
+  --gold:#d5a52a;
+  --white:#fff;
+  --light:#f3f6fa;
+}
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}
-a{text-decoration:none;color:inherit}
-.topbar{background:var(--navy);color:white;text-align:center;padding:8px 12px;font-size:13px}
-header{background:white;position:sticky;top:0;z-index:10;box-shadow:0 3px 14px #071b5015}
-.nav{max-width:1180px;margin:auto;padding:13px 18px;display:flex;align-items:center;justify-content:space-between;gap:15px}
-.brand{font-weight:900;color:var(--navy);font-size:19px;line-height:1.1}
-.brand small{display:block;color:var(--red);font-size:11px;letter-spacing:2px;margin-top:4px}
-nav{display:flex;gap:19px;font-size:14px;font-weight:bold}
-nav a:hover{color:var(--red)}
-button{cursor:pointer}
-.cart-btn,.gold-btn{border:0;border-radius:24px;background:var(--gold);color:var(--navy);font-weight:800;padding:11px 17px}
-.hero{max-width:1180px;margin:22px auto 0;padding:0 18px}
-.hero img{display:block;width:100%;height:auto;border-radius:17px;box-shadow:0 8px 25px #071b5020}
-.welcome{text-align:center;padding:34px 18px 20px}
-.welcome h1{color:var(--navy);font-size:clamp(26px,4vw,39px)}
-.welcome p{max-width:730px;margin:9px auto;color:#5c667a}
-.section{max-width:1180px;margin:auto;padding:24px 18px}
-.section h2{font-size:26px;color:var(--navy);margin-bottom:5px}
-.sub{color:#687386;font-size:14px;margin-bottom:17px}
-.categories{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
-.category{background:white;border:1px solid #e5eaf2;border-radius:14px;text-align:center;padding:17px 8px;font-weight:bold;color:var(--navy);box-shadow:0 4px 14px #071b5009}
-.category b{display:block;font-size:29px;margin-bottom:5px}
-.toolbar{display:flex;gap:10px;margin:15px 0 18px;flex-wrap:wrap}
-.toolbar input,.toolbar select{padding:12px;border:1px solid #d5dce8;border-radius:10px;background:white;font-size:14px}
-.toolbar input{flex:1;min-width:190px}
-.products{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
-.product{background:white;border:1px solid #e5eaf2;border-radius:14px;overflow:hidden;box-shadow:0 5px 17px #071b500b}
-.product-photo{height:165px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#eaf0fb,#fff);font-size:60px}
-.product-photo img{width:100%;height:100%;object-fit:cover}
-.product-info{padding:13px}
-.product h3{color:var(--navy);font-size:16px}
-.product p{color:#697386;font-size:13px;min-height:38px;margin-top:4px}
-.price{font-weight:800;color:var(--red);margin:8px 0}
-.actions{display:flex;gap:7px}
-.actions button{flex:1;border:0;border-radius:8px;padding:10px 5px;font-weight:bold}
-.add{background:#eaf0fb;color:var(--navy)}
-.order{background:var(--green);color:white}
-.about,.contact{border-radius:16px;padding:24px;display:grid;grid-template-columns:1.2fr 1fr;gap:22px}
-.about{background:white}
-.about p{color:#5d687c}
-.features{display:grid;grid-template-columns:1fr 1fr;gap:10px;align-content:center}
-.features span{background:#f1f5ff;padding:11px;border-radius:9px;font-weight:bold;color:var(--navy)}
-.contact{background:var(--navy);color:white}
-.contact h2{color:#ffd15d}
-.contact p{margin:7px 0}
-.contact a{color:#ffe08a;text-decoration:underline}
-.contact .gold-btn{display:inline-block;margin-top:10px;color:var(--navy);text-decoration:none}
-footer{margin-top:28px;background:#041238;color:#dce5ff;text-align:center;padding:22px 12px;font-size:13px}
-.whatsapp-float{position:fixed;right:15px;bottom:16px;background:#159b59;color:white;padding:13px 17px;border-radius:30px;font-weight:bold;box-shadow:0 5px 18px #0003;z-index:12}
-.cart-overlay{display:none;position:fixed;inset:0;background:#0007;z-index:30;justify-content:flex-end}
-.cart-overlay.open{display:flex}
-.cart{background:white;width:min(420px,100%);height:100%;padding:20px;overflow:auto}
-.cart-head{display:flex;justify-content:space-between;align-items:center;color:var(--navy);margin-bottom:15px}
-.close{border:0;border-radius:50%;width:35px;height:35px;font-size:20px}
-.cart-row{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid #e5eaf2}
-.remove{border:0;background:none;color:var(--red)}
-.checkout{width:100%;margin-top:18px;padding:13px;border:0;border-radius:10px;background:var(--green);color:white;font-size:15px;font-weight:bold}
-@media(max-width:850px){.products{grid-template-columns:repeat(2,1fr)}.categories{grid-template-columns:repeat(3,1fr)}nav{gap:11px}}
-@media(max-width:580px){.nav{flex-wrap:wrap}.brand{font-size:17px}nav{order:3;width:100%;overflow:auto;padding:6px 0}nav a{white-space:nowrap}.cart-btn{margin-left:auto}.hero{margin-top:12px}.hero img{border-radius:10px}.categories{grid-template-columns:repeat(2,1fr)}.about,.contact{grid-template-columns:1fr}.products{gap:10px}.product-photo{height:130px}.product-info{padding:10px}.actions{flex-direction:column}}
+body{
+ font-family:Arial,sans-serif;
+ background:var(--light);
+ color:#222;
+ line-height:1.6;
+}
+header{
+ background:var(--navy);
+ color:white;
+ padding:18px 5%;
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ flex-wrap:wrap;
+ gap:12px;
+}
+.logo{
+ display:flex;
+ align-items:center;
+ gap:12px;
+}
+.logo-mark{
+ width:55px;height:55px;
+ border:2px solid var(--gold);
+ border-radius:50%;
+ display:grid;place-items:center;
+ color:var(--gold);
+ font-weight:bold;font-size:19px;
+}
+.logo h2{font-size:19px}
+.logo small{color:var(--gold)}
+nav{display:flex;flex-wrap:wrap;gap:15px}
+nav a{
+ color:white;text-decoration:none;
+ font-size:13px;font-weight:bold;
+}
+nav a:hover{color:var(--gold)}
+.hero{
+ background:linear-gradient(120deg,#071b3a,#153b69);
+ color:white;text-align:center;
+ padding:75px 15px;
+}
+.hero h1{font-size:35px;margin-bottom:12px}
+.hero p{max-width:650px;margin:0 auto 22px}
+.btn{
+ display:inline-block;
+ padding:12px 20px;
+ background:var(--gold);
+ color:#071b3a;
+ text-decoration:none;
+ border:0;border-radius:5px;
+ font-weight:bold;cursor:pointer;
+ margin:5px;
+}
+.btn-dark{background:var(--navy);color:white}
+section{padding:45px 5%}
+.section-title{
+ text-align:center;
+ color:var(--navy);
+ margin-bottom:25px;
+ font-size:26px;
+}
+.section-title:after{
+ content:"";
+ display:block;
+ width:65px;height:3px;
+ background:var(--gold);
+ margin:8px auto;
+}
+.about{text-align:center;max-width:850px;margin:auto}
+.grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+ gap:20px;
+}
+.card{
+ background:white;
+ border-radius:10px;
+ padding:20px;
+ box-shadow:0 3px 14px #00000010;
+}
+.card h3{color:var(--navy);margin-bottom:8px}
+.card p{font-size:14px}
+.card img{
+ width:100%;height:170px;
+ object-fit:cover;border-radius:7px;
+ margin-bottom:12px;
+}
+.service-icon{
+ font-size:35px;
+ margin-bottom:8px;
+}
+.gold{color:#b58613;font-weight:bold}
+form{
+ max-width:600px;
+ margin:auto;
+ background:white;
+ padding:22px;
+ border-radius:10px;
+ box-shadow:0 3px 14px #00000010;
+}
+input,select,textarea{
+ width:100%;
+ padding:12px;
+ margin:8px 0 15px;
+ border:1px solid #ccc;
+ border-radius:5px;
+ font-size:14px;
+}
+textarea{min-height:90px}
+label{font-weight:bold;font-size:14px}
+footer{
+ background:var(--navy);
+ color:white;text-align:center;
+ padding:30px 15px;
+}
+footer a{color:var(--gold)}
+.admin{
+ background:#e9edf4;
+}
+.hidden{display:none}
+.admin-box{
+ max-width:650px;margin:20px auto;
+ background:white;padding:20px;border-radius:10px;
+}
+.product-price{color:#a87910;font-weight:bold}
+.whatsapp{
+ position:fixed;
+ right:18px;bottom:18px;
+ background:#128c50;color:white;
+ padding:13px 17px;
+ border-radius:30px;
+ text-decoration:none;
+ font-weight:bold;
+ z-index:10;
+}
+@media(max-width:600px){
+ .hero h1{font-size:27px}
+ header{justify-content:center;text-align:center}
+ nav{justify-content:center}
+}
 </style>
 </head>
+
 <body>
-<div class="topbar">Quality Products • Great Service • Shopping Made Simple</div>
-<header><div class="nav">
-<a class="brand" href="#home">NA-SHARADA<small>GLOBAL LIMITED</small></a>
-<nav><a href="#home">Home</a><a href="#products">Shop</a><a href="#about">About Us</a><a href="#contact">Contact</a></nav>
-<button class="cart-btn" onclick="openCart()">Cart (<span id="cartCount">0</span>)</button>
-</div></header>
 
-<main id="home">
-<div class="hero"><img src="assets/banner.png" alt="NA-SHARADA GLOBAL LIMITED promotional banner"></div>
-<div class="welcome"><h1>Shop Smart, Live Better</h1>
-<p>Welcome to NA-SHARADA GLOBAL LIMITED. Explore our range of phones, accessories, clothing, kids wear and bedding. Contact us to confirm product availability and current prices.</p></div>
+<header>
+ <div class="logo">
+  <div class="logo-mark">NSG</div>
+  <div>
+   <h2>NA-SHARADA GLOBAL LIMITED</h2>
+   <small>RC NO: 9587470</small>
+  </div>
+ </div>
+ <nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#products">Products</a>
+  <a href="#property">Real Estate</a>
+  <a href="#agent">Become an Agent</a>
+  <a href="#contact">Contact</a>
+ </nav>
+</header>
 
-<section class="section"><h2>Shop by Category</h2><p class="sub">Explore our product collections.</p>
-<div class="categories">
-<a class="category" href="#products" onclick="chooseCategory('Phones')"><b>📱</b>Phones</a>
-<a class="category" href="#products" onclick="chooseCategory('Phone Accessories')"><b>🎧</b>Phone Accessories</a>
-<a class="category" href="#products" onclick="chooseCategory('Flower Rib & Jerseys')"><b>👕</b>Flower Rib & Jerseys</a>
-<a class="category" href="#products" onclick="chooseCategory('Kids Wear')"><b>🧸</b>Kids Wear</a>
-<a class="category" href="#products" onclick="chooseCategory('Bedding & Sleepwear')"><b>🛏️</b>Bedding & Sleepwear</a>
-</div></section>
+<div class="hero" id="home">
+ <h1>WELCOME TO NA-SHARADA GLOBAL LIMITED</h1>
+ <p>
+ Your Trusted Business Partner for Telecommunications,
+ Fashion, Real Estate, Agricultural Land and Solar Energy Solutions.
+ </p>
+ <a class="btn" href="#services">Explore Our Services</a>
+ <a class="btn btn-dark" href="#contact">Contact Us</a>
+</div>
 
-<section class="section" id="products"><h2>Our Products</h2><p class="sub">Add products to your cart or order directly through WhatsApp.</p>
-<div class="toolbar"><input id="search" type="search" placeholder="Search products..." oninput="renderProducts()">
-<select id="categoryFilter" onchange="renderProducts()"><option value="">All Categories</option><option>Phones</option><option>Phone Accessories</option><option>Flower Rib & Jerseys</option><option>Kids Wear</option><option>Bedding & Sleepwear</option></select></div>
-<div class="products" id="productGrid"></div>
+<section id="about">
+ <h2 class="section-title">About Our Company</h2>
+ <div class="about">
+  <h3>NA-SHARADA GLOBAL LIMITED</h3>
+  <p><b>Registration Number: RC 9587470</b></p>
+  <p>
+  We are a diversified Nigerian business providing
+  telecommunications services, fashion products,
+  real estate services, agricultural land sales and
+  solar energy solutions.
+  Our mission is to provide quality services and
+  build lasting relationships with our customers.
+  </p>
+ </div>
 </section>
 
-<section class="section" id="about"><div class="about">
-<div><h2>About Us</h2><p>NA-SHARADA GLOBAL LIMITED is committed to making everyday shopping simple and convenient. Browse our product categories, ask our team about availability and place your order through WhatsApp. We welcome enquiries from customers across Nigeria.</p></div>
-<div class="features"><span>✓ Quality Products</span><span>✓ Helpful Customer Service</span><span>✓ Great Value</span><span>✓ Easy WhatsApp Orders</span></div>
-</div></section>
+<section id="services">
+ <h2 class="section-title">Our Services</h2>
+ <div class="grid">
 
-<section class="section" id="contact"><div class="contact">
-<div><h2>Contact Us</h2><p><strong>WhatsApp Orders:</strong> 07044407777</p><p><strong>Phone:</strong> 07033334242</p><p><strong>Phone:</strong> 07039371007</p><p><strong>Address:</strong> No. 4, Sharada Malam, Bus Stop, near the Friday Mosque, Kano, Nigeria.</p></div>
-<div><h2>Need Help?</h2><p>Contact us for product enquiries, availability and orders. Our team will assist you.</p><a class="gold-btn" href="https://wa.me/2347044407777" target="_blank" rel="noopener">Chat with us on WhatsApp</a></div>
-</div></section>
-</main>
-<footer>© <span id="year"></span> NA-SHARADA GLOBAL LIMITED. All rights reserved.</footer>
-<a class="whatsapp-float" href="https://wa.me/2347044407777" target="_blank" rel="noopener">WhatsApp Us</a>
+  <div class="card">
+   <div class="service-icon">📱</div>
+   <h3>Telecommunication</h3>
+   <p>MTN, Airtel, Glo and T2 services.</p>
+   <p>SIM Registration, SIM Sales, SIM Replacement and Line Services.</p>
+  </div>
 
-<div class="cart-overlay" id="cartOverlay" onclick="overlayClose(event)"><div class="cart">
-<div class="cart-head"><h2>Your Shopping Cart</h2><button class="close" onclick="closeCart()">×</button></div>
-<div id="cartItems"></div><button class="checkout" onclick="checkout()">Send Order via WhatsApp</button>
-</div></div>
+  <div class="card">
+   <div class="service-icon">👕</div>
+   <h3>Fashion & Clothing</h3>
+   <p>Flower Rib, Jersey, children's clothing, sleepwear and accessories.</p>
+  </div>
+
+  <div class="card">
+   <div class="service-icon">🏠</div>
+   <h3>Real Estate</h3>
+   <p>Houses for rent, houses for sale and property services.</p>
+  </div>
+
+  <div class="card">
+   <div class="service-icon">🌾</div>
+   <h3>Land & Agriculture</h3>
+   <p>Land sales, farmland sales and property assistance.</p>
+  </div>
+
+  <div class="card">
+   <div class="service-icon">☀️</div>
+   <h3>Solar Energy</h3>
+   <p>Solar panels, inverter systems, batteries and installation services.</p>
+  </div>
+
+  <div class="card">
+   <div class="service-icon">🏦</div>
+   <h3>Business Support</h3>
+   <p>Account opening assistance, BVN and National ID services.</p>
+  </div>
+
+ </div>
+</section>
+
+<section id="networks">
+ <h2 class="section-title">Telecommunication Networks</h2>
+ <div class="grid">
+  <div class="card"><h3>MTN</h3><p>SIM and network services.</p></div>
+  <div class="card"><h3>Airtel</h3><p>SIM and network services.</p></div>
+  <div class="card"><h3>Glo</h3><p>SIM and network services.</p></div>
+  <div class="card"><h3>T2</h3><p>SIM and network services.</p></div>
+ </div>
+</section>
+
+<section id="agent">
+ <h2 class="section-title">Become Our Agent</h2>
+ <div class="about">
+  <p>
+   Join NA-SHARADA GLOBAL LIMITED as an agent.
+   Apply to become a partner in our growing network.
+  </p>
+ </div>
+
+ <form id="agentForm">
+  <label>Full Name</label>
+  <input id="agentName" required placeholder="Enter your full name">
+
+  <label>Phone Number</label>
+  <input id="agentPhone" required placeholder="Enter phone number">
+
+  <label>Location</label>
+  <input id="agentLocation" required placeholder="Your location">
+
+  <label>Select Network</label>
+  <select id="agentNetwork">
+   <option>MTN</option>
+   <option>Airtel</option>
+   <option>Glo</option>
+   <option>T2</option>
+  </select>
+
+  <button class="btn" type="submit">Apply Now on WhatsApp</button>
+ </form>
+</section>
+
+<section id="products">
+ <h2 class="section-title">New Arrivals & Latest Products</h2>
+ <div class="grid" id="productList">
+  <div class="card">
+   <h3>Flower Rib</h3>
+   <p>Contact us for availability and price.</p>
+  </div>
+  <div class="card">
+   <h3>Jersey</h3>
+   <p>Contact us for availability and price.</p>
+  </div>
+  <div class="card">
+   <h3>Children's Wear</h3>
+   <p>Quality clothing for children.</p>
+  </div>
+  <div class="card">
+   <h3>Sleepwear</h3>
+   <p>Comfortable sleepwear collections.</p>
+  </div>
+ </div>
+</section>
+
+<section id="property">
+ <h2 class="section-title">Houses, Lands & Farmlands</h2>
+ <div class="grid" id="propertyList">
+  <div class="card">
+   <h3>Houses for Rent</h3>
+   <p>Contact us for available properties.</p>
+  </div>
+  <div class="card">
+   <h3>Houses for Sale</h3>
+   <p>Find your desired property.</p>
+  </div>
+  <div class="card">
+   <h3>Land for Sale</h3>
+   <p>Residential and commercial land.</p>
+  </div>
+  <div class="card">
+   <h3>Farmland for Sale</h3>
+   <p>Agricultural land opportunities.</p>
+  </div>
+ </div>
+</section>
+
+<section id="solar">
+ <h2 class="section-title">Solar Energy Solutions</h2>
+ <div class="grid">
+  <div class="card"><h3>Solar Panels</h3><p>Solar panel sales and supply.</p></div>
+  <div class="card"><h3>Inverter Systems</h3><p>Inverter and battery solutions.</p></div>
+  <div class="card"><h3>Installation</h3><p>Solar system installation services.</p></div>
+ </div>
+</section>
+
+<section id="contact">
+ <h2 class="section-title">Contact Us</h2>
+ <div class="card about">
+  <h3>NA-SHARADA GLOBAL LIMITED</h3>
+  <p>RC Number: 9587470</p>
+  <p>Address: No. 4, Sharada Malam Bus Stop,
+  Near Juma'at Mosque, Kano, Nigeria.</p>
+  <p>Phone: 07033334242</p>
+  <p>Phone: 07039371007</p>
+  <p>WhatsApp: 07044407777</p>
+  <a class="btn" href="https://wa.me/2347044407777">
+   Chat With Us on WhatsApp
+  </a>
+ </div>
+</section>
+
+<section class="admin" id="admin">
+ <h2 class="section-title">Admin Panel</h2>
+ <div class="admin-box">
+  <p><b>Company Management</b></p>
+  <p>Use this section to add new products and property listings.</p>
+
+  <label>Admin PIN</label>
+  <input id="adminPin" type="password" placeholder="Enter Admin PIN">
+
+  <button class="btn" onclick="loginAdmin()">Login</button>
+
+  <div id="adminArea" class="hidden">
+   <hr>
+   <h3>Add New Product</h3>
+
+   <label>Product Name</label>
+   <input id="newName" placeholder="Product name">
+
+   <label>Price</label>
+   <input id="newPrice" placeholder="Price">
+
+   <label>Upload Product Image</label>
+   <input id="newImage" type="file" accept="image/*">
+
+   <button class="btn" onclick="addProduct()">Publish Product</button>
+
+   <hr>
+   <h3>Add House, Land or Farm</h3>
+
+   <label>Property Title</label>
+   <input id="propertyName" placeholder="Property name">
+
+   <label>Property Price</label>
+   <input id="propertyPrice" placeholder="Price">
+
+   <label>Property Type</label>
+   <select id="propertyType">
+    <option>House for Rent</option>
+    <option>House for Sale</option>
+    <option>Land for Sale</option>
+    <option>Farmland for Sale</option>
+    <option>Solar Products</option>
+   </select>
+
+   <label>Property Image</label>
+   <input id="propertyImage" type="file" accept="image/*">
+
+   <button class="btn" onclick="addProperty()">Publish Listing</button>
+
+   <hr>
+   <h3>Upload Company Logo</h3>
+   <input id="logoImage" type="file" accept="image/*">
+   <button class="btn" onclick="saveLogo()">Save Logo</button>
+
+   <button class="btn btn-dark" onclick="logoutAdmin()">Logout</button>
+  </div>
+ </div>
+</section>
+
+<footer>
+ <h3>NA-SHARADA GLOBAL LIMITED</h3>
+ <p>RC Number: 9587470</p>
+ <p>Quality Services | Trust | Excellence</p>
+ <p>Sharada, Kano, Nigeria</p>
+ <p>WhatsApp: 07044407777</p>
+ <p>© 2026 NA-SHARADA GLOBAL LIMITED. All Rights Reserved.</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/2347044407777">
+ WhatsApp Us
+</a>
 
 <script>
-const WHATSAPP_NUMBER = "2347044407777"; // WhatsApp number: 07044407777
-// Replace the sample products and prices below with your real stock and prices.
-const products = [
- {name:"Smartphone",category:"Phones",description:"Ask us about available smartphone models.",price:"Contact for price",emoji:"📱"},
- {name:"Phone Accessories",category:"Phone Accessories",description:"Accessories for your everyday mobile needs.",price:"Contact for price",emoji:"🎧"},
- {name:"Flower Rib",category:"Flower Rib & Jerseys",description:"Ask about available colours and sizes.",price:"Contact for price",emoji:"👕"},
- {name:"Jersey",category:"Flower Rib & Jerseys",description:"Ask about available styles and sizes.",price:"Contact for price",emoji:"🥼"},
- {name:"Kids Wear",category:"Kids Wear",description:"Clothing options for children.",price:"Contact for price",emoji:"🧸"},
- {name:"Bedding & Sleepwear",category:"Bedding & Sleepwear",description:"Comfortable bedding and sleepwear options.",price:"Contact for price",emoji:"🛏️"}
-];
-let cart=[];
-function renderProducts(){
- const term=document.getElementById("search").value.toLowerCase();
- const cat=document.getElementById("categoryFilter").value;
- const shown=products.map((p,i)=>({...p,index:i})).filter(p=>(!cat||p.category===cat)&&(`${p.name} ${p.category} ${p.description}`.toLowerCase().includes(term)));
- document.getElementById("productGrid").innerHTML=shown.map(p=>`
- <article class="product"><div class="product-photo">${p.emoji}</div><div class="product-info">
- <h3>${p.name}</h3><p>${p.description}</p><div class="price">${p.price}</div>
- <div class="actions"><button class="add" onclick="addToCart(${p.index})">Add to Cart</button><button class="order" onclick="orderOne(${p.index})">Order on WhatsApp</button></div>
- </div></article>`).join("")||"<p>No products found.</p>";
+const WA = "2347044407777";
+
+// Agent application
+document.getElementById("agentForm").addEventListener("submit",function(e){
+ e.preventDefault();
+
+ const message =
+ "AGENT APPLICATION%0A" +
+ "Name: "+encodeURIComponent(document.getElementById("agentName").value)+"%0A"+
+ "Phone: "+encodeURIComponent(document.getElementById("agentPhone").value)+"%0A"+
+ "Location: "+encodeURIComponent(document.getElementById("agentLocation").value)+"%0A"+
+ "Network: "+encodeURIComponent(document.getElementById("agentNetwork").value);
+
+ window.open("https://wa.me/"+WA+"?text="+message,"_blank");
+});
+
+// Admin demo PIN. Change this before use.
+const ADMIN_PIN = "1234";
+
+function loginAdmin(){
+ if(document.getElementById("adminPin").value === ADMIN_PIN){
+  document.getElementById("adminArea").classList.remove("hidden");
+  alert("Welcome Admin");
+ }else{
+  alert("Incorrect PIN");
+ }
 }
-function chooseCategory(category){document.getElementById("categoryFilter").value=category;renderProducts()}
-function addToCart(i){cart.push(products[i]);updateCart()}
-function updateCart(){
- document.getElementById("cartCount").textContent=cart.length;
- document.getElementById("cartItems").innerHTML=cart.length?cart.map((p,i)=>`<div class="cart-row"><span>${p.emoji} ${p.name}</span><button class="remove" onclick="removeItem(${i})">Remove</button></div>`).join(""):'<p class="empty">Your cart is empty.</p>';
+function logoutAdmin(){
+ document.getElementById("adminArea").classList.add("hidden");
+ document.getElementById("adminPin").value="";
 }
-function removeItem(i){cart.splice(i,1);updateCart()}
-function openCart(){document.getElementById("cartOverlay").classList.add("open");updateCart()}
-function closeCart(){document.getElementById("cartOverlay").classList.remove("open")}
-function overlayClose(e){if(e.target.id==="cartOverlay")closeCart()}
-function orderOne(i){const p=products[i];const msg=`Hello NA-SHARADA GLOBAL LIMITED, I am interested in: ${p.name}. Please confirm availability and price.`;window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`,"_blank")}
-function checkout(){
- if(!cart.length){alert("Your cart is empty.");return}
- const lines=cart.map((p,i)=>`${i+1}. ${p.name}`).join("\n");
- const msg=`Hello NA-SHARADA GLOBAL LIMITED, I would like to order:\n${lines}\nPlease confirm availability and total price.`;
- window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`,"_blank");
+
+// Read image
+function readImage(input){
+ return new Promise((resolve,reject)=>{
+  const file=input.files[0];
+  if(!file){resolve("");return;}
+  if(file.size>500000){
+   reject("Please choose an image smaller than 500KB.");
+   return;
+  }
+  const reader=new FileReader();
+  reader.onload=()=>resolve(reader.result);
+  reader.onerror=()=>reject("Image could not be read.");
+  reader.readAsDataURL(file);
+ });
 }
-document.getElementById("year").textContent=new Date().getFullYear();
-renderProducts();updateCart();
+
+// Products
+let products=JSON.parse(localStorage.getItem("nsg_products")||"[]");
+
+function displayProducts(){
+ const list=document.getElementById("productList");
+ products.forEach((p,i)=>{
+  if(document.getElementById("product-"+i))return;
+  const card=document.createElement("div");
+  card.className="card";
+  card.id="product-"+i;
+  if(p.image){
+   const img=document.createElement("img");
+   img.src=p.image;
+   card.appendChild(img);
+  }
+  const title=document.createElement("h3");
+  title.textContent=p.name;
+  const price=document.createElement("p");
+  price.className="product-price";
+  price.textContent=p.price;
+  const link=document.createElement("a");
+  link.className="btn";
+  link.textContent="Order on WhatsApp";
+  link.href="https://wa.me/"+WA+"?text="+encodeURIComponent("I am interested in "+p.name);
+  link.target="_blank";
+  card.append(title,price,link);
+  list.appendChild(card);
+ });
+}
+async function addProduct(){
+ try{
+  const name=document.getElementById("newName").value.trim();
+  const price=document.getElementById("newPrice").value.trim();
+  const image=await readImage(document.getElementById("newImage"));
+  if(!name||!price){alert("Enter product name and price.");return;}
+  products.push({name,price,image});
+  localStorage.setItem("nsg_products",JSON.stringify(products));
+  document.getElementById("productList").innerHTML="";
+  displayProducts();
+  alert("Product added on this browser.");
+ }catch(err){alert(err);}
+}
+
+// Properties
+let properties=JSON.parse(localStorage.getItem("nsg_properties")||"[]");
+
+function displayProperties(){
+ const list=document.getElementById("propertyList");
+ properties.forEach((p,i)=>{
+  if(document.getElementById("property-"+i))return;
+  const card=document.createElement("div");
+  card.className="card";
+  card.id="property-"+i;
+  if(p.image){
+   const img=document.createElement("img");
+   img.src=p.image;
+   card.appendChild(img);
+  }
+  const title=document.createElement("h3");
+  title.textContent=p.name;
+  const type=document.createElement("p");
+  type.textContent=p.type;
+  const price=document.createElement("p");
+  price.className="product-price";
+  price.textContent=p.price;
+  const link=document.createElement("a");
+  link.className="btn";
+  link.textContent="Enquire on WhatsApp";
+  link.href="https://wa.me/"+WA+"?text="+encodeURIComponent("I am interested in "+p.name);
+  link.target="_blank";
+  card.append(title,type,price,link);
+  list.appendChild(card);
+ });
+}
+async function addProperty(){
+ try{
+  const name=document.getElementById("propertyName").value.trim();
+  const price=document.getElementById("propertyPrice").value.trim();
+  const type=document.getElementById("propertyType").value;
+  const image=await readImage(document.getElementById("propertyImage"));
+  if(!name||!price){alert("Enter property title and price.");return;}
+  properties.push({name,price,type,image});
+  localStorage.setItem("nsg_properties",JSON.stringify(properties));
+  document.getElementById("propertyList").innerHTML="";
+  displayProperties();
+  alert("Listing added on this browser.");
+ }catch(err){alert(err);}
+}
+
+// Logo upload
+async function saveLogo(){
+ try{
+  const image=await readImage(document.getElementById("logoImage"));
+  if(!image){alert("Choose a logo image first.");return;}
+  localStorage.setItem("nsg_logo",image);
+  showLogo();
+  alert("Logo saved on this browser.");
+ }catch(err){alert(err);}
+}
+function showLogo(){
+ const image=localStorage.getItem("nsg_logo");
+ if(image){
+  const mark=document.querySelector(".logo-mark");
+  mark.innerHTML="";
+  const img=document.createElement("img");
+  img.src=image;
+  img.style.width="100%";
+  img.style.height="100%";
+  img.style.objectFit="contain";
+  mark.appendChild(img);
+ }
+}
+
+displayProducts();
+displayProperties();
+showLogo();
 </script>
+
 </body>
 </html>
